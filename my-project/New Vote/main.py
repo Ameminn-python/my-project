@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from votecog import qa
-TOKEN = 'Njg2Njc3OTA1MTE1NTc4NDAz.XpbnqA.nBvp5OxgFsJV0gRqBOEb_xa6GXc'
+TOKEN = ''
 bot = commands.Bot(command_prefix='*')
 
 @bot.event
