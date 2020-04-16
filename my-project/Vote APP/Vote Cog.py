@@ -17,8 +17,8 @@ class qa(commands.Cog):
         self.asr_channel = dict()
         
     @commands.Cog.listener()
-    async def on_ready():
-        for g in client.guilds:
+    async def on_ready(self):
+        for g in bot.guilds:
             self.Question[g.id] = None
             self.do_q[g.id]=False
             self.adm[g.id]=None
@@ -26,7 +26,7 @@ class qa(commands.Cog):
             self.asr_channel[g.id] = None
 
     @commands.Cog.listener()
-    async def on_guild_join(guild):
+    async def on_guild_join(self,guild):
         self.Question[guild.id] = None
         self.do_q[guild.id]=None
         self.adm[guild.id]=None
